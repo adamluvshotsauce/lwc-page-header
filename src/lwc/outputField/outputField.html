@@ -1,0 +1,13 @@
+<template>
+    <div>
+        <p class="slds-text-title" title={fieldName}>{fieldName}</p>
+        <template if:true={linkify}>
+            <p class={fieldClasses}>
+                <a href={fieldLink} target="_blank">{fieldValue}</a>
+            </p>
+        </template>
+        <template if:false={linkify}>
+            <p class={fieldClasses}>{fieldValue}</p>
+        </template>
+    </div>
+</template>
